@@ -16,5 +16,22 @@ namespace MySportsStatAPP.Controllers
             @ViewBag.value = "Sports Statistics!!!";
             return View();
         }
+        public IActionResult Basketball()
+        {
+            return View();
+        }
+        public IActionResult Soccer()
+        {
+            return View();
+        }
+    
+        public IActionResult about()
+        {
+            return View();
+        }
+        public IActionResult Contact()
+        {
+            return View();
+        }
     }
 }

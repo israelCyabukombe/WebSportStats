@@ -1,4 +1,7 @@
-﻿body {
+﻿body{
+     background-image:url(../images/mybackground.jpg);
+}
+.ICbody {
     background-image:url(../images/mybackground.jpg);
 }
 .ICjumbotron{
@@ -29,6 +32,18 @@
 .ICnavFontSize{
     font-family:'Times New Roman';
     font-stretch:expanded;
+    font-style:normal;
+    font-size:30px;
+    color:white;
+}
+.ICBasketballPagePic{
+    background-image:url("../images/Basket_Hoop_with_Ball_in_Black_Background.jpg");
+}
+.ICSoccerPagePic{
+    background-image:url("../images/Close_Up_of_Football_Goal_pic.jpg");
+}
+.ICfooter{
+    font-family:'Times New Roman';
     font-style:normal;
     font-size:30px;
     color:white;
