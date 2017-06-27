@@ -2,16 +2,30 @@
     For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 *@
 <!DOCTYPE html>
+<link rel="stylesheet" type="text/css" href="~/css/myCss.css" media="screen" />
 <html>
 <head>
 
 </head>
 <body>
-    <div class="container-fluid">
-        <div>
-            <img src="~/images/Basket_Hoop_with_Ball_in_Black_Background.jpg" alt="soccer" style="width:100%;" />
+    <div class="container-fuild">
+        <div class="row">
+            <div class="col col-md-4">
+                <div>
+                   <img src="~/images/Basket_Hoop_with_Ball_in_Black_Background.jpg" alt="basketball" style="width:100%;" />
+                </div>
+            </div>
+            <div class="col col-md-4">
+                <button class="btn btn-primary" style="background-color:black; border-color:black">
+                     Add Team & Coach
+                </button>
+            </div>
+            <div class="col col-md-4">
+                <button class="btn btn-primary" style="background-color:black; border-color:black">
+                    Add Players
+                </button>
+            </div>
 
-            <p>Would like to add a team</p>
         </div>
     </div>
 </body>
