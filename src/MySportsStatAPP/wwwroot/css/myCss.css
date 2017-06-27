@@ -19,6 +19,7 @@
     text-decoration:underline black;
     font-family:'Times New Roman', Times, serif;
     font-style:normal;
+    font-size:50px;
    
 }
 
@@ -36,15 +37,25 @@
     font-size:30px;
     color:white;
 }
-.ICBasketballPagePic{
-    background-image:url("../images/Basket_Hoop_with_Ball_in_Black_Background.jpg");
-}
-.ICSoccerPagePic{
-    background-image:url("../images/Close_Up_of_Football_Goal_pic.jpg");
-}
+
+
 .ICfooter{
     font-family:'Times New Roman';
     font-style:normal;
     font-size:30px;
     color:white;
+}
+/*Basketball page classes*/
+.ICB_Ball_Image{
+     background-image:url("../images/Basket_Hoop_with_Ball_in_Black_Background.jpg");
+     width:auto;
+     height:auto;
+
+}
+    
+/*Soccer Page classes*/
+.ICSoccer_Image{
+    background-image:url("../images/Close_Up_of_Football_Goal_pic.jpg");
+    width:auto;
+    height:auto;
 }
