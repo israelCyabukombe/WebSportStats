@@ -1,29 +1,121 @@
 ﻿@*
     For more information on enabling MVC for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
 *@
+
+    @using MySportsStatAPP.Models;
+@model Team
+
 <!DOCTYPE html>
 <link rel="stylesheet" type="text/css" href="~/css/myCss.css" media="screen" />
+<script language="JavaScript" type="text/javascript" src="~/js/myJQfuntions.js"></script>
+<script language="JavaScript" type="text/javascript" src="~/js/FormValidationJavaScript.js"></script>
+
 <html>
 <head>
 
 </head>
-<body>
+<body >
     <div class="container-fuild">
         <div class="row">
             <div class="col col-md-4">
-                <div>
-                   <img src="~/images/Basket_Hoop_with_Ball_in_Black_Background.jpg" alt="basketball" style="width:100%;" />
+                <div style="text-align:center;">
+                   <img src="~/images/Basket_Hoop_with_Ball_in_Black_Background.jpg" alt="basketball" style="width:100%;margin:auto; border-radius:20px;" />
                 </div>
-            </div>
-            <div class="col col-md-4">
-                <button class="btn btn-primary" style="background-color:black; border-color:black">
-                     Add Team & Coach
+            </div>        
+            <div class="col col-md-4" >
+                <!--Button to click to add Team-->>
+                <button id="TeamCoach"class="btn btn-primary" style="background-color:black; border-color:black; " >
+                    Add Team & Coach
                 </button>
-            </div>
+                <p>
+                </p>
+                <!--The form to add team and Coach name-->
+                <form name="MyForm" id="TeamCoachForm"asp-action="create" method="post" role="form" style="background-color:black;" onsubmit="return MyFormValidation()" hidden="hidden">
+                    <div class="MyFields">
+                        <div class="col-xs-8">
+                            <div class="form-group MyForms">
+                                <label asp-for="TeamName" class="required" style="color:white"></label>
+                                <input asp-for="TeamName" class="form-control" type="text" />
+                                <span asp-validation="TeamName" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label class="required" style="color:white">Coach First Name</label>
+                                <input class="form-control" type="text" />
+                            </div>
+                            <div class="form-group">
+                                <label class="required" style="color:white">Coach Last Name</label>
+                                <input class="form-control" type="text" />
+                            </div>
+                            <div class="form-group">
+                                <button type="submit" class="btn btn-lg btn-success" style="background-color:black;border-color:black" onsubmit="return MyFormValidation()">
+                                     Submit
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>             
+            <!--Button to click to add Team-->>
             <div class="col col-md-4">
-                <button class="btn btn-primary" style="background-color:black; border-color:black">
+                <button id="Players"class="btn btn-primary" style="background-color:black; border-color:black">
                     Add Players
                 </button>
+                <p></p>
+                <!--The form to add Player names-->
+                <form name="MyForm" id="PlayerForm"asp-action="create" method="post" role="form" class="col-xs-8" style="background-color:black; text-decoration-color:black" onsubmit="return MyFormValidation()" hidden="hidden">
+                    <div class="form-group">
+                        <p style="color:white;">1.</p>
+                        <label class="required" style="color:white">First Name</label>
+                        <input class="form-control" style="background-color:white"/>
+                    </div>
+                    <div class="form-group">
+                        <label class="required" style="color:white">Last Name</label>
+                        <input class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                        <p style="color:white;">2.</p>
+                        <label class="required" style="color:white">First Name</label>
+                        <input class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label class="required" style="color:white">Last Name</label>
+                        <input class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <p style="color:white;">3.</p>
+                        <label class="required" style="color:white">First Name</label>
+                        <input class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label class="required" style="color:white">Last Name</label>
+                        <input class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <p style="color:white;">4.</p>
+                        <label class="required" style="color:white">First Name</label>
+                        <input class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label class="required" style="color:white">Last Name</label>
+                        <input class="form-control" />
+                    </div>
+                    <p style="color:white;">5.</p>
+                    <div class="form-group">
+                        <label class="required" style="color:white">First Name</label>
+                        <input class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <label class="required" style="color:white">Last Name</label>
+                        <input class="form-control" />
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-lg btn-success" style="background-color:#4d4d4d; border-color:black; ">
+                            Submit
+                        </button>
+                    </div>
+                </form>
+
             </div>
 
         </div>
