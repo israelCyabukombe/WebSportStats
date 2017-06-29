@@ -48,6 +48,7 @@
 /*Basketball page classes*/
 .ICB_Ball_Image{
      background-image:url("../images/Basket_Hoop_with_Ball_in_Black_Background.jpg");
+     border-radius:25px;
      width:auto;
      height:auto;
 
@@ -58,4 +59,31 @@
     background-image:url("../images/Close_Up_of_Football_Goal_pic.jpg");
     width:auto;
     height:auto;
+}
+
+.MyForms{
+ 
+
+}
+.MyForms.myInput[type="text"], textarea{
+    background-color:dimgrey;
+    color:white;
+    font-family:'Times New Roman';
+}
+/*.MyForms.forms.input[type=text]{
+       color:black;
+}*/
+.input[type="text"]{
+    background-color:dimgrey;
+}
+.ul{
+
+}
+.ul.li
+.Hide{
+    display:none;
+}
+.MyFields{
+    display:block;
+
 }
