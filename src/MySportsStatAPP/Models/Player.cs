@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace MySportsStatAPP.Model
+namespace MySportsStatAPP.Models
 {
     public class Player
     {
@@ -24,8 +24,10 @@ namespace MySportsStatAPP.Model
         [NotMapped]
         public Team MyTeam { get; set; }
 
+        Team tempTeam = new Team();
+        Coach temCoach = new Coach();
 
-
+      
 
 
     }
