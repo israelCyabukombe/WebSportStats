@@ -9,7 +9,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Configuration;
 using Microsoft.EntityFrameworkCore;
-using MySportsStatAPP.Model;
+using MySportsStatAPP.Models;
 
 namespace MySportsStatAPP
 {
@@ -48,9 +48,9 @@ namespace MySportsStatAPP
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILoggerFactory loggerFactory, SportsDbContext context)
         {
-            loggerFactory.AddConsole();
+            loggerFactory.AddConsole(Configuration.GetSection("logging"));
             loggerFactory.AddDebug();
             app.UseApplicationInsightsRequestTelemetry();
             app.UseApplicationInsightsExceptionTelemetry();
@@ -71,6 +71,7 @@ namespace MySportsStatAPP
                     name: "default",
                     template: "{controller=Home}/{action=Index}/{id?}");
             });
+            DBInitializer.Initialize(context);
         }
     }
 }
